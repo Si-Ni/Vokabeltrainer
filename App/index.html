@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ausgabe">
+        
+    </div>
+    <form id="neuerEintragForm">
+        <div>
+            <input id="eingabe1" type="text" required>
+            <input id="eingabe2" type="text" required>
+        </div>
+        <div id="neuerEintragDiv">
+            <button id="neuerEintrag"> + </button>
+        </div>
+    </form>
+    <div id="steuerButtonDiv">
+        <button class="buttonEingabe" onclick="socket.emit('links')" id="links"> linke Seite verdecken </button>       
+        <button class="buttonEingabe" onclick="socket.emit('anzeigen')" id="anzeigen"> anzeigen </button>
+        <button class="buttonEingabe" onclick="socket.emit('deleteAll')" id="deleteAll"> alles Löschen </button>
+        <button class="buttonEingabe" onclick="socket.emit('rechts')" id="rechts"> rechte Seite verdecken </button>
+    </div>
+    <script src="node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
